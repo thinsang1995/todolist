@@ -10,7 +10,7 @@ function addItem() {
 
 	let question = document.createElement('label');
 	divWapper.appendChild(question);
-	question.appendChild(document.createTextNode("Did you do it? No, I din't"));
+	question.appendChild(document.createTextNode("Did you do it? No, I didn't"));
 
 	let checkedButton = document.createElement('input');
 	divWapper.appendChild(checkedButton);
@@ -19,7 +19,7 @@ function addItem() {
 
 	let deleteButton = document.createElement('button');
 	divWapper.appendChild(deleteButton);
-	deleteButton.appendChild(document.createTextNode('Delete Me'));
+	deleteButton.appendChild(document.createTextNode('Delete'));
 	deleteButton.setAttribute('onclick', 'deleteItem(this)');
 
 	//Data of status
@@ -36,8 +36,10 @@ function addItem() {
 function checkedItem(check) {
 	if (check.checked === true) {
 		check.previousElementSibling.textContent = "Did you do it? Yes, I did";
+		check.previousElementSibling.previousElementSibling.setAttribute('class', 'checked');
 	} else {
-		check.previousElementSibling.textContent = "Did you do it? No, I din't";
+		check.previousElementSibling.textContent = "Did you do it? No, I didn't";
+		check.previousElementSibling.previousElementSibling.setAttribute('class', '');
 	}
 } 
 

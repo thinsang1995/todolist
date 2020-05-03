@@ -3,35 +3,36 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="todolist.css">
 	<script type="text/javascript" src="todolist.js"></script>
 	<title>Make Your To Do List</title>
 </head>
 <body>
 	<div class="container">
 		<h1>To Do List</h1>
-		<h3>Create Items</h3>
-		<div>
-			<input type="text" id="input-name">
-			<button type="submit" onclick="addItem()">Add</button>
+		<h3>Create Items</h3><hr>
+		<div class="input-container">
+			<input type="text" id="input-name" placeholder="Name...">
+			<button class="add-btn" type="submit" onclick="addItem()">Add</button>
 		</div>
-		<h3>Create Items List</h3>
+		<h3>Create Items List</h3><hr>
 		<div class="item-list" id="input-container">
 
-<!-- 			<div>
-				<h4>Learn Something</h4>
+			<!-- <div>
+				<h4 class="checked">Learn Something</h4>
 				<label>Did you do it? No, I didn't</label>
 				<input type="checkbox" onclick="checkedItem(this)">
-				<button type="submit" onclick="deleteItem(this)">Delete Me</button>
+				<button type="submit" onclick="deleteItem(this)">Delete</button>
 			</div>
 			<div>
-				<h4>Learn PHP</h4>
+				<h4 class="checked">Learn PHP</h4>
 				<label>Did you do it? No, I didn't</label>
 				<input type="checkbox" onclick="checkedItem(this)">
-				<button type="submit" onclick="deleteItem(this)">Delete Me</button>
+				<button type="submit" onclick="deleteItem(this)">Delete</button>
 			</div> -->
 		</div>
 		<br>
-		<button type="submit" onclick="deleteAll()">Delete All</button>
+		<button class="clear-btn" type="submit" onclick="deleteAll()">Delete All</button>
 	</div>
 </body>
 </html>
